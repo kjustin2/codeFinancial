@@ -1,0 +1,39 @@
+--- Crib Grader ---
+-------------------
+
+--- Wants from the user ---
+1) How many rooms do you want? (1-10)
+2) How important is it to have nearby amenities? (1(unimportant) - 10(important))
+3) What is your monthly budget? (Dollar amount)
+4) Do you own a pet? (Yes/No)
+
+--- General Info ---
+1) What is the address? (Address, City, State, Zip Code)
+2) How many people will be living with you? (Enter an integer amount)
+3) Pets allowed? (Yes/No)
+4) If yes, any fees that come with owning a pet? (Dollar amount for pets per month)
+5) How long is the lease?
+
+--- Cost ---
+1) Monthly rent amount? (Enter Dollar Amount)
+2) Lease fees? (Enter Dollar Amount)
+3) Parking cost per month? (Enter Dollar Amount)
+4) Insurance cost per month? (Enter Dollar Amount)
+5) Utilities not included? (Water, Electric, Gas, Internet, Cable, Other)
+
+--- Location ---
+1) Do you own a car? (Yes/No)
+2) Distance to School? (Distance in miles)
+3) Walkability? (1(not walkable) - 5(very walkable)
+3) Surrounding amenities? (Select all that apply: convince store, grocery store, bars, restaurants, parks, public transportation, fitness centers, health facilities, other)
+4) Sketchiness of neighborhood? (Slider from 1(sketchiest) - 10(safest)
+
+--- Size ---
+1) Square footage? (Enter square footage integer)
+2) Number of bedrooms? (Number of rooms slider from 1 - 15)
+3) Number of bathrooms? (Bathrooms slider from 1-10 with half interval steps for half baths)
+
+-- Landlord ---
+1) How did you get along with him/her? (1(terrible) - 10(fantastic))
+2) Were they eager to get the place off the market? (Yes/No/Sorta)
+3) Were they accommodating? (Yes/No/Sorta)
