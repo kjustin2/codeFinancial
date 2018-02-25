@@ -17,24 +17,27 @@ and open the template in the editor.
             </div>
             <br><br>
             Price<br><br>
-            &emsp; 1) What is your budget? <input type="text" id="1"><br>
-            &emsp; 2) What is the rent per person? <input type="text" id="2"><br>
-            &emsp; 3) Utilities per person? <input type="text" id="3"><br>
-            &emsp; 4) Cost of insurance for each person? <input type="text" id="4"><br>
+            &emsp; 1) How much, total, are you looking to spend each month on housing? <input type="text" id="1"><br>
+            &emsp; 2) What will you be paying in rent each month? <input type="text" id="2"><br>
+            &emsp; 3) What will the total cost of utilities be each month? <input type="text" id="3"><br>
+            &emsp; 4) How much will your insurance cost you each month? <input type="text" id="4"><br>
             <br>
             Location<br><br>
-            &emsp; 1) How far will your commute be? <input type="text" id="5"><br>
-            &emsp; 2) How will you travel?  <select id="6">
+            &emsp; 1) How many miles will you have to commute to work or school? <input type="text" id="5"><br>
+            &emsp; 2) How will you make this commute?  <select id="6">
                 <option value="Public Transport">Public Transport</option>
                 <option value="Personal Vehicle">Personal Vehicle</option>
                 <option value="Bike">Bike</option>
                 <option value="Walk">Walk</option>
             </select> <br>
-            &emsp; 3) Which of these is within walking distance? (Hold shift to select multiple) <select multiple id="7">
+            &emsp; 3) Are any of these within walking distance of the apartment? (Hold [SHIFT] to select multiple) <select multiple id="7">
                 <option value="Grocery Store">Grocery Store</option>
                 <option value="Restaurant">Restaurant</option>
                 <option value="Park">Park</option>
                 <option value="Bus Stop">Bus Stop/Subway</option>
+                <option value="Laundry Facilities">Laundry Facilities</option>
+            </select><br>
+            &emsp; 4) How about these? (Hold [SHIFT] to select multiple) <select multiple id="8">
                 <option value="Gym">Gym</option>
                 <option value="Bar">Bar/Club</option>
                 <option value="School">School</option>
@@ -43,29 +46,29 @@ and open the template in the editor.
             </select><br>
             <br>
             Size<br><br>
-            &emsp; 1) How many people are you with? <input type="text" id="8"><br>
-            &emsp; 2) How many bedrooms? <input type="text" id="9"><br>
-            &emsp; 3) How many bathrooms? <input type="text" id="10"><br>
-            &emsp; 4) Square footage? <input type="text" id="11"><br>
+            &emsp; 1) How many people are you with? <input type="text" id="9"><br>
+            &emsp; 2) How many bedrooms? <input type="text" id="10"><br>
+            &emsp; 3) How many bathrooms? <input type="text" id="11"><br>
+            &emsp; 4) Square footage? <input type="text" id="12"><br>
             <br>
             Landlord<br><br>
-            &emsp; 1) Was it easy to contact the landlord? <input type="checkbox" id="12"><br>
-            &emsp; 2) Is the landlord willing to negotiate terms of lease? <input type="checkbox" id="13"><br>
-            &emsp; 3) Will the landlord put commitments to you in writing? <input type="checkbox" id="14"><br>
+            &emsp; 1) Was it easy to contact the landlord? <input type="checkbox" id="13"><br>
+            &emsp; 2) Is the landlord willing to negotiate terms of lease? <input type="checkbox" id="14"><br>
+            &emsp; 3) Will the landlord put commitments to you in writing? <input type="checkbox" id="15"><br>
             <br>
             Lease Terms<br><br>
-            &emsp; 1) Will you have to pay any of the followings? (Hold shift to select multiple)<select multiple id="15">
+            &emsp; 1) Will you have to pay any of the followings? (Hold [SHIFT] to select multiple)<select multiple id="16">
                 <option value="Application Fee">Application Fee</option>
                 <option value="Application Deposit">Application Deposit</option>
                 <option value="Finders Fee">Finders Fee</option>
             </select><br>
-            &emsp; 2) Are utilities included? <input type="checkbox" id="16"><br>
-            &emsp; 3) Will you be staying the full term of the lease? <input type="checkbox" id="17"><br>
-            &emsp; 4) Will the term of the lease be extended automatically? <input type="checkbox" id="18"><br>
-            &emsp; 5) Does the rent have late fees? <input type="checkbox" id="19"><br>
+            &emsp; 2) Are utilities included? <input type="checkbox" id="17"><br>
+            &emsp; 3) Will you be staying the full term of the lease? <input type="checkbox" id="18"><br>
+            &emsp; 4) Will the term of the lease be extended automatically? <input type="checkbox" id="19"><br>
+            &emsp; 5) Does the rent have late fees? <input type="checkbox" id="20"><br>
             <br>
             Misc<br><br>
-            &emsp; 1) Are the following in suitable working condition? (Hold shift to select multiple)<select multiple id="20">
+            &emsp; 1) Are the following in suitable working condition? (Hold [SHIFT] to select the ones that are)<select multiple id="21">
                 <option value="Appliances">Appliances</option>
                 <option value="Water Heater">Water Heater</option>
                 <option value="Toilets">Toilets</option>
@@ -76,7 +79,7 @@ and open the template in the editor.
                 <option value="Outlets">Outlets</option>
                 <option value="Central Air">Central Air</option>
             </select><br>
-            &emsp; 2) Will the landlord walk through the property to note repairs needed? <input type="checkbox" id="21"><br>
+            &emsp; 2) Will the landlord walk through the property to note any repairs the apartment needs? <input type="checkbox" id="21"><br>
             <br>
             <p id="35">Hello</p>
             <input type="button" value="Submit" OnClick="kk()"/>
