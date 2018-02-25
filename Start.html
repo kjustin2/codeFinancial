@@ -25,10 +25,10 @@ and open the template in the editor.
             Location<br><br>
             &emsp; 1) How many miles will you have to commute to work or school? <input type="text" id="5"><br>
             &emsp; 2) How will you make this commute?  <select id="6">
-                <option value="Public Transport">Public Transport</option>
-                <option value="Personal Vehicle">Personal Vehicle</option>
-                <option value="Bike">Bike</option>
-                <option value="Walk">Walk</option>
+                <option value="0">Public Transport</option>
+                <option value="1">Personal Vehicle</option>
+                <option value="2">Bike</option>
+                <option value="3">Walk</option>
             </select> <br>
             &emsp; 3) Are any of these within walking distance of the apartment? (Hold [SHIFT] to select multiple) <select multiple id="7">
                 <option value="Grocery Store">Grocery Store</option>
@@ -81,30 +81,177 @@ and open the template in the editor.
             </select><br>
             &emsp; 2) Will the landlord walk through the property to note any repairs the apartment needs? <input type="checkbox" id="22"><br>
             <br>
-            <p id="35">Hello</p>
-            <input type="button" value="Submit" OnClick="kk()"/>
+            Score: <p id="35"></p>
+            Feedback: <p id="36"></p>
+            <input type="button" value="Submit" onclick="kk()"/>
         </form>
-        <script> 
-            function kk(){
-                document.getElementById("35").innerHTML = document.getElementById("1").value;
-            }
-        </script>
 		<input type="file" id="fileinput" />
         <script type="text/javascript">
+		var dict = {};
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function(){
           if(xmlhttp.status===200 && xmlhttp.readyState===4){ 
-			var dict = {};
             var words = xmlhttp.responseText.split("\n");
 			for(i = 0; i < words.length-1; i++){
 				var wordSplit = words[i].split(",");
 				dict[wordSplit[0]] = wordSplit[1];
 			}
-            alert(dict["00624"]);
           }
         };
         xmlhttp.open("GET","info.txt",true);
         xmlhttp.send();
+            var score;
+            var sig;
+            var avg;
+            var grade;
+            function kk(){
+                var zip = prompt("Please enter your zip code", "00000");
+                avg = dict[zip];
+                var mod6 = document.getElementById("6").value;
+                if(mod6 === "0"){
+                    mod6 = .15;
+                }
+                if(mod6 === "1"){
+                    mod6 = .3
+                }
+                if(mod6 === "2"){
+                    mod6 = 1;
+                }
+                if(mod6 === "3"){
+                    mod6 = .5
+                }
+                var count7 = 0;
+                var options = document.getElementById('7').options;
+                for (var i=0; i < options.length; i++) {
+                    if (options[i].selected) count7++;
+                }
+                options = document.getElementById('7').options;
+                var tot7 = options.length;
+                var count8 = 0;
+                options = document.getElementById('8').options;
+                for (var i=0; i < options.length; i++) {
+                    if (options[i].selected) count8++;
+                }
+                options = document.getElementById('8').options;
+                var tot8 = options.length;
+                var count16 = 0;
+                options = document.getElementById('16').options;
+                for (var i=0; i < options.length; i++) {
+                    if (options[i].selected) count16++;
+                }
+                options = document.getElementById('16').options;
+                var tot16 = options.length;
+                var count21 = 0;
+                options = document.getElementById('21').options;
+                for (var i=0; i < options.length; i++) {
+                    if (options[i].selected) count21++;
+                }
+                options = document.getElementById('21').options;
+                var tot21 = options.length;
+                var check13;
+                if(document.getElementById('13').checked === true){
+                    check13 = 1;
+                }
+                else{
+                    check13 = 0;
+                }
+                var check14;
+                if(document.getElementById('14').checked === true){
+                    check14 = 1;
+                }
+                else{
+                    check14 = 0;
+                }
+                var check15;
+                if(document.getElementById('15').checked === true){
+                    check15 = 1;
+                }
+                else{
+                    check15 = 0;
+                }
+                var check17;
+                if(document.getElementById('17').checked === true){
+                    check17 = 1;
+                }
+                else{
+                    check17 = 0;
+                }
+                var check18;
+                if(document.getElementById('18').checked === true){
+                    check18 = 1;
+                }
+                else{
+                    check18 = 0;
+                }
+                var check19;
+                if(document.getElementById('19').checked === true){
+                    check19 = 1;
+                }
+                else{
+                    check19 = 0;
+                }
+                var check20;
+                if(document.getElementById('20').checked === true){
+                    check20 = 1;
+                }
+                else{
+                    check20 = 0;
+                }
+                var check22;
+                if(document.getElementById('22').checked === true){
+                    check22 = 1;
+                }
+                else{
+                    check22 = 0;
+                }
+                sig = Math.log(document.getElementById("2").value+document.getElementById("3").value)/avg + Math.log(document.getElementById("1").value/(document.getElementById("2").value+document.getElementById("3").value+document.getElementById("4").value)) - Math.log(Math.pow(1.5,(document.getElementById("5").value*mod6))) + Math.log((count7 + 1)/(tot7-count7 + 1)) + Math.log((tot8-count8+1)/(count8+1)) + Math.log(document.getElementById("10").value / document.getElementById("9").value) + Math.log((2*document.getElementById("11").value)/document.getElementById("9").value) + Math.log(document.getElementById("12").value/(450 * document.getElementById("9").value)) + check13 + check14 + check15 - count16+1 + check17 + check18 + check19 + check20 + Math.log(count21/9) + (check22 - 1);
+                score = 85 + sig;
+                if(score > 0 && score < 60){
+                    grade = "F";
+                }
+                if(score > 60 && score < 70){
+                    grade = "D";
+                }
+                if(score > 70 && score < 80){
+                    grade = "C";
+                }
+                if(score > 80 && score < 90){
+                    grade = "B";
+                }
+                if(score > 90 && score < 100){
+                    grade = "A";
+                }
+                var sure = "";
+                if((document.getElementById("2").value + document.getElementById("3").value + document.getElementById("4").value) > document.getElementById("1").value){
+                    sure += "Your estimated cost of rent, utilities, and insurance exceed your monthly budget. You should either reconsider how much you're looking to spend or find a less expensive place to live." + "\n";
+                }
+                if((document.getElementById("2").value + document.getElementById("3").value) > avg){
+                    sure += "Your gross monthly cost of living (combined rent and utilities) is above the average for your area, you might need to discuss this with your landlord and possibly negotiate it down." + "\n";
+                }
+                if(count7 > (tot7 - count7)){
+                    sure += "It's great that there are a lot of amenities around your apartment, but keep in mind that this may raise the price in the eyes of the landlord." + "\n";
+                }
+                if(count8 > (tot8 - count8)){
+                    sure +=  "Remember; bars, clubs, busy roads, and airports can all make a lot of noise, which might get annoying." + "\n";
+                }
+                if((document.getElementById("10").value/document.getElementById("9").value) < document.getElementById("1").value){
+                    sure += "You've indicated that there are fewer bedrooms than people renting the apartment. You should make sure everyone is ok with the possibility of a roomate." + "\n";
+                }
+                if((document.getElementById("9").value/document.getElementById("11").value) > document.getElementById("2").value){
+                    sure += "As a general rule, less than 1 bathroom for every two people will be cramped, which can be a huge source of conflict between roomates." + "\n";
+                }
+                if((document.getElementById("12").value/document.getElementById("9").value) < 350){
+                    sure += "Based on your square footage estimate, the apartment may be a bit cramped. It's important to have enough space to unwind on your own if you want to." + "\n";
+                }
+                if(check13 === 0){
+                    sure += "If you have trouble getting in contact with your landlord, that could become problematic if you need repairsor want to cancel your lease. Make sure you have a reliable way to contact him or her." + "\n";
+                }
+                if(check14 === 1 && check15 === 0){
+                    sure += "It could be a red flag if a landlord is only willing to make verbal commitments. Remember, while these could be enforceable in court, it's much easier to prove your case if you have documentation signed by the landlord." + "\n";
+                }
+                document.getElementById("35").innerHTML = grade;
+                document.getElementById("36").innerHTML = sure;
+            }
         </script>
         <div></div>
     </body>
