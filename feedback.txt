@@ -1,0 +1,66 @@
+# Given the condition preceding the colon in each line, either display the comment following the colon or don't
+
+if 2+3+4 > 1: "Your estimated cost of rent, utilities, and insurance exceed your monthly budget. You should either reconsider 
+               how much you're looking to spend or find a less expensive place to live."
+
+if 2+3 > HUD Avg.: "Your gross monthly cost of living (combined rent and utilities) is above the average for your area, you
+                    might need to discuss this with your landlord and possibly negotiate it down."
+                    
+if Y7 > N7: "It's great that there are a lot of amenities around your apartment, but keep in mind that this may raise the price
+            in the eyes of the landlord."
+            
+if Y8 > N8: "Remember; bars, clubs, busy roads, and airports can all make a lot of noise, which might get annoying."
+
+if 10 / 9 < 1: "You've indicated that there are fewer bedrooms than people renting the apartment. You should make sure 
+                everyone is ok with the possibility of a roomate."
+                
+if 9 / 11 > 2: "As a general rule, less than 1 bathroom for every two people will be cramped, which can be a huge source of
+                conflict between roomates."
+
+if 12 / 9 < 350: "Based on your square footage estimate, the apartment may be a bit cramped. It's important to have enough 
+                 space to unwind on your own if you want to."
+                 
+if 13 = False: "If you have trouble getting in contact with your landlord, that could become problematic if you need repairs
+                or want to cancel your lease. Make sure you have a reliable way to contact him or her."
+                
+if 14 = True and 15 = False: "It could be a red flag if a landlord is only willing to make verbal commitments. Remember, while
+                              these could be enforceable in court, it's much easier to prove your case if you have documentation
+                              signed by the landlord."
+                              
+if 15 = True: "If you sit down to renegotiate a lease agreement with a landlord, keep a list of all changes that were made. Then
+               ask them to update the language of the lease and compare the new copy with your list of changes. If everything is
+               what it should be, then you can sign the new lease."
+
+if Y16 >= 1: "In terms of fees and charges by a landlord:
+                  - Application fees are normal, and should be about the cost of a background and credit check (less than $50)
+                  - Application deposits are meant to cover the cost of delisting the apartment while you are in the process
+                    of negotiating a lease agreement. Try to get in writing that this will be converted toawrds the security
+                    deposit if you sign the lease, or that it will be refunded if the landlord terminates negotiations.
+                  - Finder's Fees are more questionable, so you should try to avoid paying one to the landlord. If you use a
+                    broker, their finder's fee is something you should ask about before you retain them.
+                    
+if 17 = False: "If utilities aren't included in the rent, you'll both have to pay them out of pocket and remember to mail the
+                checks. Make sure you have a schedule for doing this, since nobody wants their utilities to cut out."
+                
+if 18 = False: "If you plan to live on the property less than the full term of the lease, you should talk to the landlord about
+                shortening the term. If it doesn't get shortened you'll basically be paying for an apartment you aren't living
+                in."
+                
+if 19 = True: "If the lease will be automatically extended, find out how much notice you have to give the landlord to cancel it.
+               otherwise, you could be on the hook for the apartment even if you want to move out."
+               
+if 20 = True: "Though late fees on rent are a standard term of some leases, talk to your landlord about their individual policy.
+               If they're particularly strict about lateness of rent, then you need to be especially careful not to miss a payment."
+               
+if Y20 > 0: "If the apartment has any of the features listed above, then it is the responsibility of the landlord to ensure
+             they are in a proper working order. While this doesn't apply to more minor problems, if any of these is in very
+             poor condition, then it could violate the implied warranty of habitability. Make sure you have in writing that your
+             landlord will fix any issues you have in these areas. Additionally, unless you are the direct cause of the issues,
+             your landlord should not charge you to fix them."
+             
+if 22 = False: "A landlord who won't walk through the apartment to note problems with you could be a red flag, as they may be
+                trying to maintain plausible deniability that any problems existed."
+                
+if 22 = True: "It's easy to walk through a property with a landlord to note problems. All you have to do is write down any
+               issues you both see, then sign or initial the paper. Make sure you both keep a copy in case any discrepancy 
+               arises."
