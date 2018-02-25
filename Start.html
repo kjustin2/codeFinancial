@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Pad Rater</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form>
+            <div align="center">
+                Pad Rater
+            </div>
+            <br><br>
+            Price<br><br>
+            &emsp; 1) How much, total, are you looking to spend each month on housing? <input type="text" id="1"><br>
+            &emsp; 2) What will you be paying in rent each month? <input type="text" id="2"><br>
+            &emsp; 3) What will the total cost of utilities be each month? <input type="text" id="3"><br>
+            &emsp; 4) How much will your insurance cost you each month? <input type="text" id="4"><br>
+            <br>
+            Location<br><br>
+            &emsp; 1) How many miles will you have to commute to work or school? <input type="text" id="5"><br>
+            &emsp; 2) How will you make this commute?  <select id="6">
+                <option value="Public Transport">Public Transport</option>
+                <option value="Personal Vehicle">Personal Vehicle</option>
+                <option value="Bike">Bike</option>
+                <option value="Walk">Walk</option>
+            </select> <br>
+            &emsp; 3) Are any of these within walking distance of the apartment? (Hold [SHIFT] to select multiple) <select multiple id="7">
+                <option value="Grocery Store">Grocery Store</option>
+                <option value="Restaurant">Restaurant</option>
+                <option value="Park">Park</option>
+                <option value="Bus Stop">Bus Stop/Subway</option>
+                <option value="Laundry Facilities">Laundry Facilities</option>
+                <option value="Gym">Gym</option>
+            </select><br>
+            &emsp; 4) How about these? (Hold [SHIFT] to select multiple) <select multiple id="8">
+                <option value="Bar">Bar/Club</option>
+                <option value="School">School</option>
+                <option value="Highway">Highway/Busy Road</option>
+                <option value="Airport">Airport</option>
+            </select><br>
+            <br>
+            Size<br><br>
+            &emsp; 1) How many people are you with? <input type="text" id="9"><br>
+            &emsp; 2) How many bedrooms? <input type="text" id="10"><br>
+            &emsp; 3) How many bathrooms? <input type="text" id="11"><br>
+            &emsp; 4) Square footage? <input type="text" id="12"><br>
+            <br>
+            Landlord<br><br>
+            &emsp; 1) Was it easy to contact the landlord? <input type="checkbox" id="13"><br>
+            &emsp; 2) Is the landlord willing to negotiate terms of lease? <input type="checkbox" id="14"><br>
+            &emsp; 3) Will the landlord put commitments to you in writing? <input type="checkbox" id="15"><br>
+            <br>
+            Lease Terms<br><br>
+            &emsp; 1) Will you have to pay any of the followings? (Hold [SHIFT] to select multiple)<select multiple id="16">
+                <option value="Application Fee">Application Fee</option>
+                <option value="Application Deposit">Application Deposit</option>
+                <option value="Finders Fee">Finders Fee</option>
+            </select><br>
+            &emsp; 2) Are utilities included? <input type="checkbox" id="17"><br>
+            &emsp; 3) Will you be staying the full term of the lease? <input type="checkbox" id="18"><br>
+            &emsp; 4) Will the term of the lease be extended automatically? <input type="checkbox" id="19"><br>
+            &emsp; 5) Does the rent have late fees? <input type="checkbox" id="20"><br>
+            <br>
+            Misc<br><br>
+            &emsp; 1) Are the following in suitable working condition? (Hold [SHIFT] to select the ones that are)<select multiple id="21">
+                <option value="Appliances">Appliances</option>
+                <option value="Water Heater">Water Heater</option>
+                <option value="Toilets">Toilets</option>
+                <option value="Roofing">Roofing</option>
+                <option value="Furnace">Furnace</option>
+                <option value="Locks">Locks</option>
+                <option value="Faucets">Faucets/Pipes</option>
+                <option value="Outlets">Outlets</option>
+                <option value="Central Air">Central Air</option>
+            </select><br>
+            &emsp; 2) Will the landlord walk through the property to note any repairs the apartment needs? <input type="checkbox" id="22"><br>
+            <br>
+            <p id="35">Hello</p>
+            <input type="button" value="Submit" OnClick="kk()"/>
+        </form>
+        <script> 
+            function kk(){
+                document.getElementById("35").innerHTML = document.getElementById("1").value;
+            }
+        </script>
+		<input type="file" id="fileinput" />
+        <script type="text/javascript">
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function(){
+          if(xmlhttp.status===200 && xmlhttp.readyState===4){ 
+			var dict = {};
+            var words = xmlhttp.responseText.split("\n");
+			for(i = 0; i < words.length-1; i++){
+				var wordSplit = words[i].split(",");
+				dict[wordSplit[0]] = wordSplit[1];
+			}
+            alert(dict["00624"]);
+          }
+        };
+        xmlhttp.open("GET","info.txt",true);
+        xmlhttp.send();
+        </script>
+        <div></div>
+    </body>
+</html>
