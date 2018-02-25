@@ -6,6 +6,7 @@
 2) How important is it to have nearby amenities? (1(unimportant) - 10(important))
 3) What is your monthly budget? (Dollar amount)
 4) Do you own a pet? (Yes/No)
+5) Do you want to smoke? (Yes/No)
 
 --- General Info ---
 1) What is the address? (Address, City, State, Zip Code)
@@ -27,6 +28,7 @@
 3) Walkability? (1(not walkable) - 5(very walkable)
 3) Surrounding amenities? (Select all that apply: convince store, grocery store, bars, restaurants, parks, public transportation, fitness centers, health facilities, other)
 4) Sketchiness of neighborhood? (Slider from 1(sketchiest) - 10(safest)
+5) Access to parking? (Close / Far / None)
 
 --- Size ---
 1) Square footage? (Enter square footage integer)
@@ -37,6 +39,30 @@
 1) How did you get along with him/her? (1(terrible) - 10(fantastic))
 2) Were they eager to get the place off the market? (Yes/No/Sorta)
 3) Were they accommodating? (Yes/No/Sorta)
+4) How easy was it to get in contact with them? (Easy/Average/Difficult)
+
+-- Lease info -- For all of these just ask whether or not they're optimal for you
+1) Length of the lease
+2) Preferred length of lease
+3) Intend to host parties (have enough space?)
+4) Furnished? 
+5) Need a guaranteur for your lease? 
+6) Option to purchase
+7) Schedule to pay rent (weekly, bi-weekly, monthly)
+8) Rent increase notice (how far in advance)
+9) Home business allowed
+10) Security Deposit size (if required)
+11) Late Rent Fee
+12) Notice for Landlord Visit (how far in advance)
+13) Notice for terminating lease early
+14) Who does maintenance (leaser or leasee)
+15) Who pays for insurance on landlord's property (leased furniture)
+16) Any signing incentives?
+17) Landlord need to improve property?
+18) Dispute resolution
+19) Subleasing
+20) Option to renew
+
 
 Do Not Want Near
 ----------------
