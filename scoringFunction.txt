@@ -1,0 +1,11 @@
+# The outer most shell of this function is the sigmoid, a function such that S(x) = ((e^x) / ((e^x)+1))
+
+# In this formula, a number in brackets (i.e. [2]) represents the answer to a question, if it is preceded by a Y or an N,
+# this corresponds to the number of selected items for the question (i.e. Y[7] means number of checked answers for Q7) and 
+# unselected items, respectively.
+
+
+Score = 50 + 50*S( log(([2]+[3]) / AVG.) + log([1] / ([2]+[3]+[4])) - log( 1.5^([5] * [mod6])) + log((Y[7] + 1)/(N[7] + 1))
+                   + log((N[8] + 1)/(Y[8] + 1)) + log([10] /[9]) + log( (2*[11]) / [9]) + log([12]/(450*[9])) 
+                   + log( Y[13][14][15]) - log( N[13][14][15]) - log(Y[16]) + log( Y[17][18][19][20] ) + log( [21]/9 )
+                   + ([22] - 1) )
